@@ -1,0 +1,100 @@
+/* Navbar */
+.navbar-brand {
+    margin-left: 1em;
+}
+
+.navbar-last {
+    margin-right: 1em;
+}
+
+.a.navlink:active {
+    color: blueviolet;
+}
+
+.bg-navbar {
+    color: #ffffff;
+    background: #283ba7;
+}
+.navbar-nav > li > .dropdown-menu { background-color: #FF0000; }
+
+.container {
+    box-shadow: 1px 1px 10px black;
+    margin-bottom: 5em;
+    margin-top: 1em;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.list-group-item:hover {
+    box-shadow: 1px 1px 10px black;
+  }
+
+.list-group-item a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Author Copyright ACP*/
+.author {
+    text-decoration: none;
+    color: black;
+}
+
+/* Card CSS Style */
+
+
+.card-shadow {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 10px;
+    /* Added */
+
+    box-shadow: 1px 1px 10px black;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.card-green {
+    background: linear-gradient(90deg, rgba(12,36,0,1) 0%, rgba(36,105,44,1) 62%, rgba(9,136,7,1) 100%);
+    box-shadow: 1px 1px 3px black;
+}
+
+.card-red {
+    background: linear-gradient(90deg, rgba(152,0,13,1) 0%, rgba(203,46,46,1) 69%, rgba(255,0,9,1) 100%);
+    box-shadow: 1px 1px 3px black;
+}
+
+.card-blue {
+    background: linear-gradient(90deg, rgba(8,0,139,1) 0%, rgba(61,61,228,1) 35%, rgba(0,212,255,1) 100%);
+    box-shadow: 1px 1px 3px black;
+}
+
+/* Button */
+.btn {
+    box-shadow: 1px 1px 5px black;
+}
+
+/* List */
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Footer*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px;
+    /* Vertically center the text there */
+    background: #283ba7;
+}
+
+#footer-copyright {
+    color: white !important;
+    text-decoration: none !important;
+}
