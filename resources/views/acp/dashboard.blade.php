@@ -39,13 +39,13 @@
         <h4>Software</h4>
         <hr>
         <strong>Ticketsystem Version:</strong>
-        <p>3.1</p>
+        <p>3.1 - DEMO</p>
         <br>
         <strong>Software developed by: </strong><br>
         <a class="author" href="https://github.com/Client-not-found" target="_blank">Client-not-found</a>
         <br>
         <br>
-        <p>Copyright 2021. All rights reserved.</p>
+        <p>Copyright 2022. All rights reserved.</p>
         @can('create', App\Page::class)
         <br>
         <h4>License</h4>

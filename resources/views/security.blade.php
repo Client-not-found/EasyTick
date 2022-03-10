@@ -26,9 +26,9 @@
                 <div class="alert alert-danger" role="alert">
                     <p>You have not enabled 2FA</p>
                 </div>
-                <form method="POST" action="{{ url('user/two-factor-authentication') }}">
+                <form method="POST" action="#">
                     @csrf
-                    <button type="submit" class="btn btn-primary">Enable</button>
+                    <button type="submit" class="btn btn-primary" disabled>Disabled in the demo</button>
                 </form>
                 @else
                 <div class="alert alert-success" role="alert">

@@ -60,7 +60,7 @@ Route::post('/user', [UserController::class, 'acpSave'] );
 
 Route::get('/profile/{id}', [UserController::class, 'profile'] );
 
-Route::post('/profilesave/{id}', [UserController::class, 'profilesave'] );
+//Route::post('/profilesave/{id}', [UserController::class, 'profilesave'] );
 
 
 Route::get('/security', [UserController::class, 'security'] );

@@ -22,7 +22,7 @@
         <br>
         <div class="card card-shadow col-md-6 offset-md-3">
             <div class="card-body">
-                <form method="post" action="/profilesave/{{auth()->user()->key}}">
+                <form method="post" action="#">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
@@ -75,8 +75,8 @@
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-md-2">
-                            <button type="submit" class="btn btn-outline-warning">Edit</button>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-warning" title='This is my title' disabled>Disabled in the demo</button>
                         </div>
                     </div>
                 </form>

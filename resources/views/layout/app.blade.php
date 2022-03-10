@@ -62,7 +62,7 @@
 
 <footer class="footer col-md-12">
     <nav class=" navbar-dark text-white">
-        <p class="text-center">(c)-2021 Client-not-found | EasyTick</p>
+        <p class="text-center">(c)-2022 Client-not-found | EasyTick</p>
     </nav>
 </footer>
 

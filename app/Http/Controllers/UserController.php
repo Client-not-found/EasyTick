@@ -55,40 +55,70 @@ class UserController extends Controller
 
 
     public function acpEdit ( Request $request, int $id ) {
-        //dd($request);
-        $this->authorize('update', User::class);
-        $request->validate([
-            'group' => 'required',
-            'username' => 'required',
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'street' => 'required',
-            'zip' => 'required',
-            'city' => 'required',
-            'state' => 'required',
-            'mail' => 'required',
-        ]);
-
-        DB::table('users')
-            ->where('key', '=', $request->id)
-            ->update(['groId' => $request->group,
-            'username' => $request->username, 
-            'password' => bcrypt( $request->password ),
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
-            'street' => $request->street,
-            'zip' => $request->zip,
-            'city' => $request->city,
-            'state' => $request->state,
-            'mail' => $request->mail]);
-
-        return view('acp.user', [
-            'users' => User::all(),
-            'knowledgebase' => Page::where( "name", 'knowledgebase' )->first(),
+        if($request->id == 1 || $request->id == 2 || $request->id == 3) {
+            //dd($request);
+            $this->authorize('update', User::class);
+            $request->validate([
+                'group' => 'required',
+                'username' => 'required',
+                'firstname' => 'required',
+                'lastname' => 'required',
+                'street' => 'required',
+                'zip' => 'required',
+                'city' => 'required',
+                'state' => 'required',
             ]);
+
+            DB::table('users')
+                ->where('key', '=', $request->id)
+                ->update(['groId' => $request->group,
+                'firstname' => $request->firstname,
+                'lastname' => $request->lastname,
+                'street' => $request->street,
+                'zip' => $request->zip,
+                'city' => $request->city,
+                'state' => $request->state]);
+
+            return view('acp.user', [
+                'users' => User::all(),
+                'knowledgebase' => Page::where( "name", 'knowledgebase' )->first(),
+            ]);
+        } else {
+            $this->authorize('update', User::class);
+            $request->validate([
+                'group' => 'required',
+                'username' => 'required',
+                'firstname' => 'required',
+                'lastname' => 'required',
+                'street' => 'required',
+                'zip' => 'required',
+                'city' => 'required',
+                'state' => 'required',
+                'mail' => 'required',
+            ]);
+
+            DB::table('users')
+                ->where('key', '=', $request->id)
+                ->update(['groId' => $request->group,
+                'username' => $request->username, 
+                'password' => bcrypt( $request->password ),
+                'firstname' => $request->firstname,
+                'lastname' => $request->lastname,
+                'street' => $request->street,
+                'zip' => $request->zip,
+                'city' => $request->city,
+                'state' => $request->state,
+                'mail' => $request->mail]);
+
+            return view('acp.user', [
+                'users' => User::all(),
+                'knowledgebase' => Page::where( "name", 'knowledgebase' )->first(),
+            ]);
+        }
+
     }
 
-    public function profilesave ( Request $request, int $id ) {
+    /*public function profilesave ( Request $request, int $id ) {
         //dd($request);
         $this->authorize('viewAny', User::class);
         $request->validate([
@@ -115,7 +145,7 @@ class UserController extends Controller
             'user' => User::where( "key", $id )->first(),
             'knowledgebase' => Page::where( "name", 'knowledgebase' )->first(),
             ]);
-    }
+    }*/
 
     public function acpDelete ( Request $request, int $id ) {
 

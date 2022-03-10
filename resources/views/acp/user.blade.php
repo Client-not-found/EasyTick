@@ -37,6 +37,9 @@
             <h4>User Management</h4>
             <p>Here you can create new users and edit and delete existing ones.</P>
         </div>
+        <div class="alert alert-danger text-center" role="alert">
+        The username, password and mail cannot be changed for the administrator, supporter and the test customer.
+        </div>
         <br>
         @can('create', App\User::class)
         <button type="button" class="btn btn-success" @click="newUser">Create new user</button>
